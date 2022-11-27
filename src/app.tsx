@@ -27,8 +27,8 @@ export const App = () => {
 				</div>
 			</div>
 			<main className="p-10 bg-slate-100">
-				<h1 className="text-base text-zinc-500">MEMORY</h1>
-				<div className="w-full">
+				<h1 className="text-base text-zinc-500 uppercase">{contentKey}</h1>
+				<div className="w-full p-2">
 					<Content contentKey={contentKey} />
 				</div>
 			</main>
