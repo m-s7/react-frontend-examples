@@ -1,7 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '@/app.css'
+import { MenuLink } from '@/components'
+import { Content } from '@/components'
+import { ContentKey } from '@/business/types'
 
 export const App = () => {
+	const [contentKey, setContentKey] = useState<ContentKey>('counter')
+
 	return (
 		<div className="main-layout">
 			<div className="w-72 overflow-y-auto overflow-x-hidden bg-zinc-700 flex flex-col justify-between">
@@ -11,36 +16,20 @@ export const App = () => {
 					</div>
 					<menu className="text-xl pl-5 pt-5 pr-5">
 						<ul>
-							<li className="p-3 text-zinc-100 hover:bg-zinc-500 hover:rounded-md hover:cursor-pointer"><span className="text-white text-2xl mr-1">♥</span>Memory</li>
-							<li className="p-3 text-gray-200"><span className="text-white text-2xl mr-1">♥</span>Counter</li>
-							<li className="p-3 text-gray-200"><span className="text-white text-2xl mr-1">♥</span> Starts</li>
+							<MenuLink text="Memory" onClick={() => { setContentKey('memory') }} />
+							<MenuLink text="Counter" onClick={() => { setContentKey('counter') }} />
 						</ul>
 					</menu>
 				</div>
-				<div className="pl-2 pb-1 text-zinc-300">
-					<p>Made with <span className="text-rose-600 text-xl">♥</span> in <a href="#">Rumia</a></p>
+				<div className="pl-4 pb-1 pr-4 text-zinc-400 text-xs flex justify-between">
+					<p>Made with <span className="text-rose-600">♥</span> in <a href="#">Rumia</a></p>
+					<p>v0.0.1</p>
 				</div>
 			</div>
 			<main className="p-10 bg-slate-100">
-				<h1 className="text-base text-gray-500">MEMORY</h1>
-				<div className="bg-gray-50 m-10 w-min rounded-xl border-zinc-300 border">
-					<div className="p-10 w-96">
-						AAA
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						BBB
-					</div>
+				<h1 className="text-base text-zinc-500">MEMORY</h1>
+				<div className="w-full">
+					<Content contentKey={contentKey} />
 				</div>
 			</main>
 		</div>
