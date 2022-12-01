@@ -1,0 +1,10 @@
+.form {
+    position: relative;
+}
+
+.hint {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    @apply bg-sky-400 w-full;
+}

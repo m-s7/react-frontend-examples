@@ -1,1 +1,1 @@
-export type ContentKey = 'counter' | 'memory'
+export type ContentKey = 'counter' | 'memory' | 'autocomplete'

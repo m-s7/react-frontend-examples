@@ -18,6 +18,7 @@ export const App = () => {
 						<ul>
 							<MenuLink text="Memory" onClick={() => { setContentKey('memory') }} />
 							<MenuLink text="Counter" onClick={() => { setContentKey('counter') }} />
+							<MenuLink text="Autocomplete" onClick={() => { setContentKey('autocomplete') }} />
 						</ul>
 					</menu>
 				</div>
