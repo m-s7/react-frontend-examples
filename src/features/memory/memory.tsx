@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect, useState} from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import '@/app.css'
 import './memory.css'
 import { Tile } from '@/features/memory/components'
