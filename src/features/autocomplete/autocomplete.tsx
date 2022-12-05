@@ -20,7 +20,7 @@ export const Autocomplete = () => {
 	}
 
 	return (
-		<Card css="w-64 h-64">
+		<Card classes="w-64 h-64">
 			<form autoComplete="off" className="form">
 				<input type="text" className="w-full" onChange={e => { handleChange(e) }} />
 				<div className="hint">

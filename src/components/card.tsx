@@ -1,14 +1,14 @@
 import React from 'react'
 
 interface CardProps {
-	css?: string,
+    classes?: string,
 }
 
 export const Card = (props: React.PropsWithChildren<CardProps>) => {
-	const { css = '', children } = props
+	const { classes = '', children } = props
 
 	return (
-		<div className={`bg-zinc-50 m-1 p-5 w-min rounded-xl border-zinc-200 border shadow ${css}`}>
+		<div className={`bg-zinc-50 m-1 p-5 w-min rounded-xl border-zinc-200 border shadow ${classes}`}>
 			{children}
 		</div>
 	)

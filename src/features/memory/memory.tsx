@@ -137,7 +137,7 @@ export const Memory = () => {
 	}
 
 	return (
-		<Card css="w-6/12">
+		<Card classes="w-6/12">
 			<div className="flex justify-between pb-10">
 				<SizeButton sizeKey={2} />
 				<SizeButton sizeKey={4} />
